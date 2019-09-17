@@ -1,3 +1,9 @@
+<?php
+  $error="";
+  if(isset($_GET["error"])){
+    $error = $_GET["error"];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,15 +26,15 @@
 
             </div>
             <div class="box">
-                <form action="">
+                <form action="logon.php" method="POST">
                     <h2>Welcome Back!</h2>
                     <h3>Sign In</h3>
                     <div>
-                        <input type="email" required>
+                        <input type="text" required name="username">
                         <label for="">Username or Email</label>
                     </div>
                     <div>
-                        <input type="password" required>
+                        <input type="password" required name="password">
                         <label for="">Password</label>
                         <button class="show-pswrd"> show </button>
                         <button class="forgot-pswrd"> Forgot Password? </button>
