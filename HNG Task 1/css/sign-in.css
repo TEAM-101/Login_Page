@@ -177,6 +177,10 @@ section.login-form {
     color: #1c377c;
 }
 
+.wrong_input p {
+    color: #cc0000;
+}
+
 @media (max-width: 36em) {
 
 
