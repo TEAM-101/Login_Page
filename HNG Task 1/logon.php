@@ -19,18 +19,15 @@
 
   $username = clean_input($_POST["username"]);
   $password = clean_input($_POST["password"]);
-  //$role = clean_input($_POST["role"]);
 
   $users_json = file_get_contents("users.json");
   $users = json_decode($users_json, true);
   $users_length = count($users);
-  //$username = "tego";
-  //$password = "jusleisnie";
+  
   for($i =0; $i < $users_length; $i++) {
-  	if (array_search($password, $users[$i])) {
-  		$a = $users[$i]["username"];
-  		echo $a;
-  		if ($a == $username) {
+  	if (array_search($username, $users[$i])) {
+  		$a = $users[$i]["password"];
+  		if ($a == $password) {
   			session_id(3);
 	        session_start();
 	        $_SESSION["username"] = $username;

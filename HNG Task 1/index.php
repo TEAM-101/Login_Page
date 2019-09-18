@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sign-in.css">
     <title>Log In Page</title>
 </head>
 
@@ -51,7 +51,7 @@
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
 
-                <p class="need">Need an account? <a href="#">Sign up here</a></p>
+                <p class="need">Need an account? <a href="./pages/sign up.html">Sign up here</a></p>
             </div>
         </section>
     </main>
