@@ -23,6 +23,7 @@
   $users_json = file_get_contents("users.json");
   $users = json_decode($users_json, true);
   $users_length = count($users);
+  $a = "";
   
   for($i =0; $i < $users_length; $i++) {
   	if (array_search($username, $users[$i])) {
@@ -36,6 +37,11 @@
   			header("Location: index.php?error=1");
   			break;
   		}
-  	}
+  	} elseif ($i == $users_length - 1) {
+      //header("Location: index.php?error=2");
+    }
+  }
+  if (!$a) {
+    header("Location: index.php?error=2");
   }
 ?>
