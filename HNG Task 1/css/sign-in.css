@@ -177,7 +177,7 @@ section.login-form {
     color: #1c377c;
 }
 
-.wrong_input p {
+p.wrong_input {
     color: #cc0000;
 }
 
