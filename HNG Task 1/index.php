@@ -2,6 +2,11 @@
   $error="";
   if(isset($_GET["error"])){
     $error = $_GET["error"];
+    if($error == "1") {
+        $error = "Wrong username or password";
+    } else if ($error == "2") {
+        $error = "Invalid Username";
+    }
   }
 ?>
 <!DOCTYPE html>
@@ -13,7 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/sign-in.css">
     <title>Log In Page</title>
 </head>
 
@@ -50,8 +55,12 @@
                     <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </div>
+                <!-------------------------------------------------------------------------
+                    This paragraph displays the text for the wrong username and passwod input-->
 
-                <p class="need">Need an account? <a href="#">Sign up here</a></p>
+                <p class="wrong_input"> <?php echo "$error"; ?> </p>
+
+                <p class="need">Need an account? <a href="./pages/sign up.html">Sign up here</a></p>
             </div>
         </section>
     </main>
