@@ -36,6 +36,9 @@
   			header("Location: index.php?error=1");
   			break;
   		}
-  	}
+  	} else {
+      header("Location: index.php?error=2");
+      break;
+    }
   }
 ?>
