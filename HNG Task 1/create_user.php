@@ -36,9 +36,9 @@ function clean_input($data) {
     $users_json = json_encode($users);
     $users_file = fopen("users.json", "w+");
     fwrite($users_file, $users_json);
-    header("Location: index.php?error=0");
+    header("Location: index.php");
  } else {
   echo $password . "  " . $verify_password;
- 	//header("Location: signup.php?error=2");
+ 	header("Location: index.php?error=3");
  }
 ?>
