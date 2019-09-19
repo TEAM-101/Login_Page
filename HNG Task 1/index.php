@@ -1,11 +1,13 @@
 <?php
   $error="";
   if(isset($_GET["error"])){
-    $error = $_GET["error"];
-    if($error == "1") {
+    $err = $_GET["error"];
+    if($err == "1") {
         $error = "Wrong username or password";
-    } else if ($error == "2") {
+    } else if ($err == "2") {
         $error = "Invalid Username";
+    } else if ($err = "3") {
+        $error = "Password Mismatch";
     }
   }
 ?>
