@@ -38,7 +38,7 @@ function clean_input($data) {
     fwrite($users_file, $users_json);
     header("Location: index.php");
  } else {
-  echo $password . "  " . $verify_password;
+    //echo $password . "  " . $verify_password;
  	header("Location: index.php?error=3");
  }
 ?>
